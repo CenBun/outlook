@@ -47,13 +47,3 @@ jobs:
         rm -f 2.py
         rm -f configid.txt
         rm -f configkey.txt    
-    - name: Commit #上传新的refresh_token到仓库
-      run: |
-        git config --global user.email hillj5609@gmail.com
-        git config --global user.name JohnHill5609
-        git add .
-        git commit -m "update new refresh_token" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
